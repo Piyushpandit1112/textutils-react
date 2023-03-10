@@ -5,13 +5,13 @@ import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 import React, { useState } from 'react'
 
-import About from './components/About';
+// import About from './components/About';
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Routes
+// } from "react-router-dom";
 
 function App() {
   
@@ -59,23 +59,24 @@ function App() {
   }
   return (
     <>
-    <Router>
+    {/* <Router> */}
+    {/* <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode} buttonText={buttonText} /> */}
     <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode} buttonText={buttonText} />
 
     <Alert alert={alert}/>
     <div className="container my-3">
 
     {/* To use render the web pages we have used the routes  */}
-    <Routes>
+    {/* <Routes>
             <Route exact path="/about" element={<About />}> </Route>
             <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter your text to Analyse below" mode={mode} />}></Route>
-    </Routes>
-
+    </Routes> */}
+{/*  */}
         
-      {/* <TextForm heading="Enter the text to analyze below" mode={mode}  showAlert={showAlert} /> */}
+      <TextForm heading="Enter the text to analyze below" mode={mode}  showAlert={showAlert} />
       {/* <About/> */}
     </div>
-    </Router>
+    {/* </Router> */}
     </>
 
   );
